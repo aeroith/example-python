@@ -1,0 +1,505 @@
+0.03s - Using GEVENT_SUPPORT: False
+0.00s - Using GEVENT_SHOW_PAUSED_GREENLETS: False
+0.00s - pydevd __file__: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py
+0.07s - pydevd: Use libraries filter: False
+
+0.00s - IDE_PROJECT_ROOTS []
+
+0.00s - Collecting default library roots.
+0.00s - LIBRARY_ROOTS ['/Users/serhat/Library/Python/3.9/lib/python/site-packages', '/opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9', '/opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages', '/opt/homebrew/lib/python3.9/site-packages', '/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9', '/opt/homebrew/opt/python@3.9/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages']
+
+0.00s - Connecting to 127.0.0.1:54558
+0.00s - Connected.
+0.00s - Applying patching to hide pydevd threads (Py3 version).
+0.00s - Process PydevdAuthorizeRequest: {
+    "arguments": {
+        "debugServerAccessToken": "a8b32cd14a46e14d502ba20a0a9cc853246cbc6e1a09182dfdc560006953c638"
+    },
+    "command": "pydevdAuthorize",
+    "seq": 1,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 1, "success": true, "command": "pydevdAuthorize", "body": {"clientAccessToken": null}, "seq": 2, "pydevd_cmd_id": 502}
+
+0.00s - Process PydevdSystemInfoRequest: {
+    "arguments": {},
+    "command": "pydevdSystemInfo",
+    "seq": 2,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 2, "success": true, "command": "pydevdSystemInfo", "body": {"python": {"version": "3.9.15final0", "implementation": {"name": "cpython", "version": "3.9.15final0", "description": "CPython"}}, "platform": {"name": "darwin"}, "process": {"pid": 15990, "ppid": 15805, "executable": "/opt/homebrew/opt/python@3.9/bin/python3.9", "bitness": 64}, "pydevd": {"usingCython": false, "usingFrameEval": false}}, "seq": 4, "pydevd_cmd_id": 502}
+
+0.00s - Process EvaluateRequest: {
+    "arguments": {
+        "expression": "\nif 'debugpy' not in sys.modules:\n    sys.path.insert(0, '/Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl')\n    try:\n        import debugpy\n    finally:\n        del sys.path[0]\n",
+        "format": {}
+    },
+    "command": "evaluate",
+    "seq": 3,
+    "type": "request"
+}
+
+0.10s - processing internal command: InternalThreadCommands(<function internal_evaluate_expression_json at 0x1080b60d0>, (<_pydevd_bundle._debug_adapter.pydevd_schema.EvaluateRequest object at 0x1081e9460>, '*'), {})
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 3, "success": true, "command": "evaluate", "body": {"result": "", "variablesReference": 0, "presentationHint": {}}, "seq": 6, "pydevd_cmd_id": 502}
+
+0.00s - Using /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd_attach_to_process/attach_x86_64.dylib lib in arch: arm64.
+0.00s - Error loading: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd_attach_to_process/attach_x86_64.dylib
+Traceback (most recent call last):
+  File "/Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd_tracing.py", line 253, in _load_python_helper_lib_uncached
+    lib = ctypes.pydll.LoadLibrary(filename)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ctypes/__init__.py", line 452, in LoadLibrary
+    return self._dlltype(name)
+  File "/opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ctypes/__init__.py", line 374, in __init__
+    self._handle = _dlopen(self._name, mode)
+OSError: dlopen(/Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd_attach_to_process/attach_x86_64.dylib, 0x0006): tried: '/Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd_attach_to_process/attach_x86_64.dylib' (mach-o file, but is an incompatible architecture (have (x86_64), need (arm64e)))
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _read_line
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/queue.py - get
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - set_tracing_for_untraced_contexts
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _locked_settrace
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - settrace
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - _settrace
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - listen
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - debug
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__init__.py - listen
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - start_debugging
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - run_module
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - main
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__main__.py - <module>
+0.00s - Set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py - _run_code
+0.00s - Set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py - _run_module_code
+0.00s - Set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py - run_module
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py - execute_module
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py - execute_entry
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py - _execute
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py - _wrap_profiling
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py - _wrap_coverage
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py - execute
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex_bootstrapper.py - bootstrap_pex
+0.00s - Set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/__main__.py - <module>
+0.00s - Set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py - _run_code
+0.00s - Set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py - _run_module_as_main
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - settrace
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - _settrace
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - listen
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - debug
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__init__.py - listen
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - start_debugging
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - run_module
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - main
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__main__.py - <module>
+5.13s - Process PydevdAuthorizeRequest: {
+    "arguments": {
+        "debugServerAccessToken": "a8b32cd14a46e14d502ba20a0a9cc853246cbc6e1a09182dfdc560006953c638"
+    },
+    "command": "pydevdAuthorize",
+    "seq": 4,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 4, "success": true, "command": "pydevdAuthorize", "body": {"clientAccessToken": null}, "seq": 8, "pydevd_cmd_id": 502}
+
+0.00s - Process InitializeRequest: {
+    "arguments": {
+        "adapterID": "python",
+        "clientID": "vscode",
+        "clientName": "Visual Studio Code",
+        "columnsStartAt1": true,
+        "linesStartAt1": true,
+        "locale": "en-us",
+        "pathFormat": "path",
+        "supportsArgsCanBeInterpretedByShell": true,
+        "supportsInvalidatedEvent": true,
+        "supportsMemoryReferences": true,
+        "supportsProgressReporting": true,
+        "supportsRunInTerminalRequest": true,
+        "supportsVariablePaging": true,
+        "supportsVariableType": true
+    },
+    "command": "initialize",
+    "seq": 5,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 5, "success": true, "command": "initialize", "seq": 10, "body": {"supportsConfigurationDoneRequest": true, "supportsFunctionBreakpoints": true, "supportsConditionalBreakpoints": true, "supportsHitConditionalBreakpoints": true, "supportsEvaluateForHovers": true, "exceptionBreakpointFilters": [{"filter": "raised", "label": "Raised Exceptions", "default": false}, {"filter": "uncaught", "label": "Uncaught Exceptions", "default": true}, {"filter": "userUnhandled", "label": "User Uncaught Exceptions", "default": false}], "supportsStepBack": false, "supportsSetVariable": true, "supportsRestartFrame": false, "supportsGotoTargetsRequest": true, "supportsStepInTargetsRequest": true, "supportsCompletionsRequest": true, "completionTriggerCharacters": [], "supportsModulesRequest": true, "additionalModuleColumns": [], "supportedChecksumAlgorithms": [], "supportsRestartRequest": false, "supportsExceptionOptions": true, "supportsValueFormattingOptions": true, "supportsExceptionInfoRequest": true, "supportTerminateDebuggee": true, "supportsDelayedStackTraceLoading": true, "supportsLoadedSourcesRequest": false, "supportsLogPoints": true, "supportsTerminateThreadsRequest": false, "supportsSetExpression": true, "supportsTerminateRequest": true, "supportsDataBreakpoints": false, "supportsReadMemoryRequest": false, "supportsDisassembleRequest": false, "supportsClipboardContext": true, "supportsDebuggerProperties": true, "pydevd": {"processId": 15990}}, "pydevd_cmd_id": 502}
+
+0.00s - Process AttachRequest: {
+    "arguments": {
+        "__configurationTarget": 6,
+        "__sessionId": "b9672d8d-4c28-4416-8b71-b8f924e58ee7",
+        "connect": {
+            "host": "localhost",
+            "port": 5678
+        },
+        "debugOptions": [
+            "RedirectOutput",
+            "UnixClient",
+            "ShowReturnValue"
+        ],
+        "justMyCode": true,
+        "name": "Python: Remote Attach",
+        "pathMappings": [
+            {
+                "localRoot": "/Users/serhat/Repos/example-python",
+                "remoteRoot": "."
+            }
+        ],
+        "request": "attach",
+        "showReturnValue": true,
+        "type": "python",
+        "workspaceFolder": "/Users/serhat/Repos/example-python"
+    },
+    "command": "attach",
+    "seq": 6,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->    CMD_PROCESS_EVENT {"type": "event", "event": "process", "body": {"name": "/private/var/folders/hx/yc9dcpds22d32189zdkt60x00000gn/T/pants-sandbox-uvbUaK/src/python/helloworld/main.py", "systemProcessId": 15990, "isLocalProcess": true, "startMethod": "attach"}, "seq": 12, "pydevd_cmd_id": 204}
+
+0.00s - pydevd: Use libraries filter: True
+
+0.00s - Show return values: True
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 6, "success": true, "command": "attach", "seq": 14, "pydevd_cmd_id": 502}
+
+0.00s - Process SetDebuggerPropertyRequest: {
+    "arguments": {
+        "ideOS": "UNIX",
+        "multiThreadsSingleNotification": true,
+        "skipPrintBreakpointException": [
+            "NameError"
+        ],
+        "skipSuspendOnBreakpointException": [
+            "BaseException"
+        ]
+    },
+    "command": "setDebuggerProperty",
+    "seq": 7,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 7, "success": true, "command": "setDebuggerProperty", "seq": 16, "body": {}, "pydevd_cmd_id": 502}
+
+0.00s - Process SetBreakpointsRequest: {
+    "arguments": {
+        "breakpoints": [
+            {
+                "line": 6
+            }
+        ],
+        "lines": [
+            6
+        ],
+        "source": {
+            "name": "main.py",
+            "path": "/Users/serhat/Repos/example-python/src/python/helloworld/main.py"
+        },
+        "sourceModified": false
+    },
+    "command": "setBreakpoints",
+    "seq": 8,
+    "type": "request"
+}
+
+0.00s - Request for breakpoint in: /Users/serhat/Repos/example-python/src/python/helloworld/main.py line: 6
+0.00s - Breakpoint (after path translation) in: /Users/serhat/Repos/example-python/src/python/helloworld/main.py line: 6
+0.00s - File traced: /Users/serhat/Repos/example-python/src/python/helloworld/main.py
+0.00s - Added breakpoint:/Users/serhat/Repos/example-python/src/python/helloworld/main.py - line:6 - func_name:None
+
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - set_tracing_for_untraced_contexts
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - on_breakpoints_changed
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_api.py - add_breakpoint
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_process_net_command_json.py - on_setbreakpoints_request
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_process_net_command_json.py - process_net_command_json
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/queue.py - get
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - block_until_configuration_done
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _wait_for_attach
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - wait_for_client
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__init__.py - wait_for_client
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - start_debugging
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - run_module
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - main
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__main__.py - <module>
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 8, "success": true, "command": "setBreakpoints", "body": {"breakpoints": [{"verified": true, "id": 0, "source": {"name": "main.py", "path": "/Users/serhat/Repos/example-python/src/python/helloworld/main.py"}, "line": 6}]}, "seq": 18, "pydevd_cmd_id": 502}
+
+0.01s - sending cmd (http_json) -->    CMD_THREAD_CREATE {"type": "event", "event": "thread", "body": {"reason": "started", "threadId": 1}, "seq": 20, "pydevd_cmd_id": 103}
+
+0.01s - Process SetFunctionBreakpointsRequest: {
+    "arguments": {
+        "breakpoints": []
+    },
+    "command": "setFunctionBreakpoints",
+    "seq": 9,
+    "type": "request"
+}
+
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - set_tracing_for_untraced_contexts
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - on_breakpoints_changed
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_api.py - set_function_breakpoints
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_process_net_command_json.py - on_setfunctionbreakpoints_request
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_process_net_command_json.py - process_net_command_json
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/queue.py - get
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - block_until_configuration_done
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _wait_for_attach
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - wait_for_client
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__init__.py - wait_for_client
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - start_debugging
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - run_module
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - main
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__main__.py - <module>
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 9, "success": true, "command": "setFunctionBreakpoints", "body": {"breakpoints": []}, "seq": 22, "pydevd_cmd_id": 502}
+
+0.01s - Process SetExceptionBreakpointsRequest: {
+    "arguments": {
+        "filters": [
+            "userUnhandled"
+        ]
+    },
+    "command": "setExceptionBreakpoints",
+    "seq": 10,
+    "type": "request"
+}
+
+0.00s - Exceptions to hook on user uncaught code: {'BaseException': <_pydevd_bundle.pydevd_breakpoints.ExceptionBreakpoint object at 0x10834aa00>}.
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_timeout.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - set_tracing_for_untraced_contexts
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - on_breakpoints_changed
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_api.py - add_python_exception_breakpoint
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_process_net_command_json.py - on_setexceptionbreakpoints_request
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_process_net_command_json.py - process_net_command_json
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/queue.py - get
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py - _on_run
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_daemon_thread.py - run
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap_inner
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - _bootstrap
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/threading.py - wait
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - block_until_configuration_done
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py - _wait_for_attach
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/api.py - wait_for_client
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__init__.py - wait_for_client
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - start_debugging
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - run_module
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/server/cli.py - main
+0.00s - SKIP set tracing of frame: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/__main__.py - <module>
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 10, "success": true, "command": "setExceptionBreakpoints", "seq": 24, "body": {}, "pydevd_cmd_id": 502}
+
+0.00s - Process ConfigurationDoneRequest: {
+    "arguments": {},
+    "command": "configurationDone",
+    "seq": 11,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 11, "success": true, "command": "configurationDone", "seq": 26, "pydevd_cmd_id": 502}
+
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/string.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/posixpath.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site.py
+0.00s - Process ThreadsRequest: {
+    "command": "threads",
+    "seq": 12,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 12, "success": true, "command": "threads", "body": {"threads": [{"id": 1, "name": "MainThread"}]}, "seq": 28, "pydevd_cmd_id": 502}
+
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/genericpath.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/sysconfig.py
+0.01s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/runpy.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/importlib/util.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/_distutils_hack/__init__.py
+0.00s - File traced: /private/var/folders/hx/yc9dcpds22d32189zdkt60x00000gn/T/pants-sandbox-uvbUaK/src/python/helloworld/main.py
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/00d2dde5a675579325902536738dd27e4fac1fd68f773fe36c21044eb559e187/ansicolors-1.1.8-py2.py3-none-any.whl/colors/__init__.py
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/00d2dde5a675579325902536738dd27e4fac1fd68f773fe36c21044eb559e187/ansicolors-1.1.8-py2.py3-none-any.whl/colors/colors.py
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/00d2dde5a675579325902536738dd27e4fac1fd68f773fe36c21044eb559e187/ansicolors-1.1.8-py2.py3-none-any.whl/colors/csscolors.py
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/00d2dde5a675579325902536738dd27e4fac1fd68f773fe36c21044eb559e187/ansicolors-1.1.8-py2.py3-none-any.whl/colors/version.py
+0.00s - File traced: /private/var/folders/hx/yc9dcpds22d32189zdkt60x00000gn/T/pants-sandbox-uvbUaK/src/python/helloworld/greet/__init__.py
+0.00s - File traced: /private/var/folders/hx/yc9dcpds22d32189zdkt60x00000gn/T/pants-sandbox-uvbUaK/src/python/helloworld/greet/greeting.py
+0.00s - File traced: /private/var/folders/hx/yc9dcpds22d32189zdkt60x00000gn/T/pants-sandbox-uvbUaK/src/python/helloworld/translator/__init__.py
+0.00s - File traced: /private/var/folders/hx/yc9dcpds22d32189zdkt60x00000gn/T/pants-sandbox-uvbUaK/src/python/helloworld/translator/translator.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/dataclasses.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/re.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/sre_compile.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/sre_parse.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/enum.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/functools.py
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/bc30153eec47d82f20c6f5e1a13d4ee725c6deb7013a67557f89bfe5d25235c4/setuptools-56.2.0-py3-none-any.whl/pkg_resources/__init__.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/inspect.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/ntpath.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/__init__.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/decoder.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/random.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/json/encoder.py
+0.00s - sending cmd (http_json) --> CMD_WRITE_TO_CONSOLE {"type": "event", "event": "output", "body": {"output": "\u001b[32mBonjour, pantsbuild!\u001b[0m", "category": "stdout", "source": {}}, "seq": 30, "pydevd_cmd_id": 116}
+
+0.00s - sending cmd (http_json) --> CMD_WRITE_TO_CONSOLE {"type": "event", "event": "output", "body": {"output": "\n", "category": "stdout", "source": {}}, "seq": 32, "pydevd_cmd_id": 116}
+
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex.py
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/pex_bootstrapper.py
+0.00s - File not traced (not in project - force_check_project_scope): /opt/homebrew/Cellar/python@3.9/3.9.15/Frameworks/Python.framework/Versions/3.9/lib/python3.9/contextlib.py
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/.bootstrap/pex/variables.py
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - File traced: /Users/serhat/.cache/pants/named_caches/pex_root/unzipped_pexes/156f511d6689cc088e8b727f4a11c2da7de83948/__main__.py
+0.00s - Unable to load helper lib to set tracing to all threads (unsupported python vm).
+0.00s - sending cmd (http_json) -->      CMD_THREAD_KILL {"type": "event", "event": "thread", "body": {"reason": "exited", "threadId": 1}, "seq": 34, "pydevd_cmd_id": 104}
+
+0.08s - Process ThreadsRequest: {
+    "command": "threads",
+    "seq": 13,
+    "type": "request"
+}
+
+0.00s - sending cmd (http_json) -->           CMD_RETURN {"type": "response", "request_seq": 13, "success": true, "command": "threads", "body": {"threads": []}, "seq": 36, "pydevd_cmd_id": 502}
+
+0.16s - No threads alive, finishing debug session
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads (called from: File "/Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/pydevd.py", line 263, in _on_run)
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads (first call)
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads no commands being processed.
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads killing thread: <CheckAliveThread(pydevd.CheckAliveThread, started 6164656128)>
+0.00s - pydevd.CheckAliveThread received kill signal
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads killing thread: <WriterThread(pydevd.Writer, started daemon 6114177024)>
+0.00s - sending cmd (http_json) -->             CMD_EXIT {"type": "event", "event": "terminated", "seq": 38, "body": {}, "pydevd_cmd_id": 129}
+
+0.00s - pydevd.Writer received kill signal
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads killing thread: <_TimeoutThread(Thread-6, started daemon 6181482496)>
+0.00s - Thread-6 received kill signal
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads killing thread: <PyDBCommandThread(pydevd.CommandThread, started daemon 6147829760)>
+0.00s - pydevd.CommandThread received kill signal
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads killing thread: <ReaderThread(pydevd.Reader, started daemon 6131003392)>
+0.00s - pydevd.Reader received kill signal
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads waiting for pydb daemon threads to finish
+0.00s - WriterThread: CMD_EXIT received
+0.00s - WriterThread: exit
+0.00s - ReaderThread: empty contents received (len(line) == 0).
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads (called from: File "/Users/serhat/.cache/pants/named_caches/pex_root/installed_wheels/4de7777842da7e08652f2776c552070bbdd758557fdec73a15d7be0e4aab95ce/debugpy-1.6.0-py2.py3-none-any.whl/debugpy/_vendored/pydevd/_pydevd_bundle/pydevd_comm.py", line 299, in _terminate_on_socket_close)
+0.00s - PyDB.dispose_and_kill_all_pydevd_threads (already disposed - wait)
+0.51s - PyDB.dispose_and_kill_all_pydevd_threads: finished
+0.00s - ReaderThread: exit
+0.01s - PyDB.dispose_and_kill_all_pydevd_threads: finished
+0.00s - pydevd.stoptrace()
